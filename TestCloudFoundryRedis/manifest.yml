@@ -1,0 +1,11 @@
+---
+applications:
+- name: TestCloudFoundryRedis
+  memory: 768M
+  instances: 1
+  path: ./target/TestCloudFoundryRedis-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_DEBUG: '{enabled: true}'
+  services:
+    - testRedis
